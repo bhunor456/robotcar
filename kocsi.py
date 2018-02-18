@@ -21,9 +21,9 @@ Motor2A = 5 #29-es láb input 4 sárga kábel
 Motor2B = 6 #31-es láb input 3 zöld kábel
 Motor2E = 13 #33-as láb enable 3,4 lila kábel
 
-#GPIO.setup(7,GPIO.OUT)
-#GPIO.setup(13,GPIO.OUT)
-#GPIO.setup(15,GPIO.OUT)
+GPIO.setup(7,GPIO.OUT)
+GPIO.setup(13,GPIO.OUT)
+GPIO.setup(15,GPIO.OUT)
 #for x in range (0,7):
     #GPIO.output(7,True)
     #time.sleep(0.125)
@@ -59,7 +59,7 @@ try:
         if char == ord('q'):
             break
         elif char == curses.KEY_UP:
-            print("Előre/up")
+            print("Előre")
             GPIO.output(Motor1A,GPIO.HIGH)# True, (1)
             GPIO.output(Motor1B,GPIO.LOW) #False, (0)
             GPIO.output(Motor1E,GPIO.HIGH) #True, (1)
@@ -67,7 +67,7 @@ try:
             GPIO.output(Motor2B,GPIO.LOW) #False, (0)
             GPIO.output(Motor2E,GPIO.HIGH) #True, (1)
         elif char == curses.KEY_DOWN:
-            print("Hátra/down")
+            print("Hátra")
             GPIO.output(Motor1A,GPIO.LOW) #False, (0)
             GPIO.output(Motor1B,GPIO.HIGH) #True, (1)
             GPIO.output(Motor1E,GPIO.HIGH) #True, (1)
@@ -75,7 +75,7 @@ try:
             GPIO.output(Motor2B,GPIO.HIGH) #True (1)
             GPIO.output(Motor2E,GPIO.HIGH) #True (1)
         elif char == curses.KEY_RIGHT:
-            print("Jobbra/right")
+            print("Jobbra")
             GPIO.output(Motor1A,GPIO.LOW) #False, (0)
             GPIO.output(Motor1B,GPIO.HIGH) #True, (1)
             GPIO.output(Motor1E,GPIO.HIGH) #True, (1)
@@ -83,7 +83,7 @@ try:
             GPIO.output(Motor2B,GPIO.LOW) #True, (1)
             GPIO.output(Motor2E,GPIO.HIGH) #True, (1)
         elif char == curses.KEY_LEFT:
-            print("Balra/left")
+            print("Balra")
             GPIO.output(Motor1A,GPIO.HIGH) #True, (1)
             GPIO.output(Motor1B,GPIO.LOW) #False, (0)
             GPIO.output(Motor1E,GPIO.HIGH) #True, (1)
@@ -91,7 +91,7 @@ try:
             GPIO.output(Motor2B,GPIO.HIGH) #True, (1)
             GPIO.output(Motor2E,GPIO.HIGH) #True, (1)
         elif char == 10:
-            print("Állj/stop")
+            print("Állj")
             GPIO.output(Motor1A,GPIO.LOW) #False, (0)
             GPIO.output(Motor1B,GPIO.LOW) #False, (0)
             GPIO.output(Motor1E,GPIO.LOW) #False, (0)
