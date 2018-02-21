@@ -1,6 +1,6 @@
 import curses
-#import time
 import RPi.GPIO as GPIO
+#import time
 from time import sleep 
 
 #GPIO.setmode(GPIO.BOARD)
@@ -21,22 +21,28 @@ Motor2A = 5 #29-es láb input 4 sárga kábel
 Motor2B = 6 #31-es láb input 3 zöld kábel
 Motor2E = 13 #33-as láb enable 3,4 lila kábel
 
-#GPIO.setup(7,GPIO.OUT)
-#GPIO.setup(13,GPIO.OUT)
-#GPIO.setup(15,GPIO.OUT)
+#LED1 = 4
+#LED2 = 27
+#LED3 = 22
+
+
+
+#GPIO.setup(LED1,GPIO.OUT)
+#GPIO.setup(LED2,GPIO.OUT)
+#GPIO.setup(LED3,GPIO.OUT)
 #for x in range (0,7):
-    #GPIO.output(7,True)
-    #time.sleep(0.125)
-    #GPIO.output(7,False)
-    #time.sleep(0.125)
-    #GPIO.output(13,True)
-    #time.sleep(0.125)
-    #GPIO.output(13,False)
-    #time.sleep(0.125)
-    #GPIO.output(15,True)
-    #time.sleep(0.125)
-    #GPIO.output(15,False)
-    #time.sleep(0.125)
+    #GPIO.output(LED1,GPIO.HIGH) #true
+    #time.sleep(1)
+    #GPIO.output(LED1,GPIO.LOW) #false
+    #time.sleep(1)
+    #GPIO.output(LED2,GPIO.HIGH) #true
+    #time.sleep(1)
+    #GPIO.output(LED2,GPIO.LOW) #false
+    #time.sleep(1)
+    #GPIO.output(LED3,GPIO.HIGH) #true
+    #time.sleep(1)
+    #GPIO.output(LED3,GPIO.LOW) #false
+    #time.sleep(1)
 
 GPIO.setup(Motor1A,GPIO.OUT)
 GPIO.setup(Motor1B,GPIO.OUT)
