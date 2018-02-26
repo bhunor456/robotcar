@@ -3,7 +3,6 @@ import RPi.GPIO as GPIO
 #import time
 from time import sleep 
 
-#GPIO.setmode(GPIO.BOARD)
 GPIO.setmode(GPIO.BCM)
 
 #def setup():
@@ -20,29 +19,6 @@ Motor1E = 25 #22-es láb enable 1,2 lila kábel
 Motor2A = 5 #29-es láb input 4 sárga kábel
 Motor2B = 6 #31-es láb input 3 zöld kábel
 Motor2E = 13 #33-as láb enable 3,4 lila kábel
-
-#LED1 = 4
-#LED2 = 27
-#LED3 = 22
-
-
-
-#GPIO.setup(LED1,GPIO.OUT)
-#GPIO.setup(LED2,GPIO.OUT)
-#GPIO.setup(LED3,GPIO.OUT)
-#for x in range (0,7):
-    #GPIO.output(LED1,GPIO.HIGH) #true
-    #time.sleep(1)
-    #GPIO.output(LED1,GPIO.LOW) #false
-    #time.sleep(1)
-    #GPIO.output(LED2,GPIO.HIGH) #true
-    #time.sleep(1)
-    #GPIO.output(LED2,GPIO.LOW) #false
-    #time.sleep(1)
-    #GPIO.output(LED3,GPIO.HIGH) #true
-    #time.sleep(1)
-    #GPIO.output(LED3,GPIO.LOW) #false
-    #time.sleep(1)
 
 GPIO.setup(Motor1A,GPIO.OUT)
 GPIO.setup(Motor1B,GPIO.OUT)
@@ -71,7 +47,7 @@ try:
             GPIO.output(Motor1E,GPIO.HIGH) #True, (1)
             GPIO.output(Motor2A,GPIO.HIGH) #True, (1)
             GPIO.output(Motor2B,GPIO.LOW) #False, (0)
-            GPIO.output(Motor2E,GPIO.HIGH) #True, (1)
+            GPIO.output(Motor2E,GPIO.HIGH) #True, (1
         elif char == curses.KEY_DOWN:
             print("Hátra")
             GPIO.output(Motor1A,GPIO.LOW) #False, (0)
