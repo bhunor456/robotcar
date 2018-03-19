@@ -1,6 +1,5 @@
 import curses
 import RPi.GPIO as GPIO
-#import time
 from time import sleep 
 
 GPIO.setmode(GPIO.BCM)
@@ -40,29 +39,29 @@ try:
         char = screen.getch()
         if char == ord('q'):
             break
-        elif char == curses.KEY_UP:
+        elif char == curses.KEY_UP:          #1, és 0: logikai kimeneti értékek
             print("Előre")
-            GPIO.output(Motor1A,GPIO.HIGH)# True, (1)
-            GPIO.output(Motor1B,GPIO.LOW) #False, (0)
+            GPIO.output(Motor1A,GPIO.HIGH)# True, (1)   
+            GPIO.output(Motor1B,GPIO.LOW) #False, (0)   
             GPIO.output(Motor1E,GPIO.HIGH) #True, (1)
             GPIO.output(Motor2A,GPIO.HIGH) #True, (1)
             GPIO.output(Motor2B,GPIO.LOW) #False, (0)
-            GPIO.output(Motor2E,GPIO.HIGH) #True, (1
+            GPIO.output(Motor2E,GPIO.HIGH) #True, (1)
         elif char == curses.KEY_DOWN:
             print("Hátra")
             GPIO.output(Motor1A,GPIO.LOW) #False, (0)
             GPIO.output(Motor1B,GPIO.HIGH) #True, (1)
             GPIO.output(Motor1E,GPIO.HIGH) #True, (1)
             GPIO.output(Motor2A,GPIO.LOW) #False, (0) 
-            GPIO.output(Motor2B,GPIO.HIGH) #True (1)
-            GPIO.output(Motor2E,GPIO.HIGH) #True (1)
+            GPIO.output(Motor2B,GPIO.HIGH) #True  (1)
+            GPIO.output(Motor2E,GPIO.HIGH) #True  (1)
         elif char == curses.KEY_RIGHT:
             print("Jobbra")
             GPIO.output(Motor1A,GPIO.LOW) #False, (0)
             GPIO.output(Motor1B,GPIO.HIGH) #True, (1)
             GPIO.output(Motor1E,GPIO.HIGH) #True, (1)
             GPIO.output(Motor2A,GPIO.HIGH) #True, (1)
-            GPIO.output(Motor2B,GPIO.LOW) #True, (1)
+            GPIO.output(Motor2B,GPIO.LOW) #True,  (1)
             GPIO.output(Motor2E,GPIO.HIGH) #True, (1)
         elif char == curses.KEY_LEFT:
             print("Balra")
@@ -93,10 +92,7 @@ try:
     #Motor1.ChangeDutyCycle(speed)
     #Motor2.ChangeDutyCycle(speed)
 
-    print ("1-es motor indul")
-    print("előre")
-
-    sleep(1)
+    #sleep(1)
 
 #Hátrafelé haladás:
 #def backward(speed)
@@ -109,7 +105,7 @@ try:
     #Motor1.ChangeDutyCycle(speed)
     #Motor2.ChangeDutyCycle(speed)
     
-    sleep(1)
+    
 
     #Balra fordulás
     #def left(speed)
@@ -141,19 +137,6 @@ try:
     #Motor1.changeDutyCycle(0)
     #Motor2.ChangeDutycycle(0)
     
-    #forward(100)
-    #sleep(2)
-    #backward(100)
-    #sleep(2)
-    #forward(50)
-    #sleep(3)
-    #stop(0)
-    #left(75)
-    #sleep(3)
-    #right(75)
-    #sleep(2)
-    #stop()
-
 finally:
     curses.nocbreak(); scree.keypad(0); curses.echo()
     curses.endwin()
