@@ -6,11 +6,6 @@ GPIO.setmode(GPIO.BCM)
 
 #def setup():
 
-#Motor1 = GPIO.PWM(25, 50)
-#Motor1 = start(0)
-#Motor2 = GPIO.PWM(11, 50)
-#Motor2 = start(0)
-
 Motor1A = 23 #16-os láb input 1, sárga kábel
 Motor1B = 24 #18-as láb input 2 zöld kábel
 Motor1E = 25 #22-es láb enable 1,2 lila kábel
