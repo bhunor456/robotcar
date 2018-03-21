@@ -6,13 +6,13 @@ GPIO.setmode(GPIO.BCM)
 
 #def setup():
 
-Motor1A = 23 #16-os láb input 1, sárga kábel
-Motor1B = 24 #18-as láb input 2 zöld kábel
-Motor1E = 25 #22-es láb enable 1,2 lila kábel
+Motor1A = 23 #16-os GPIO láb IC: input 1, sárga kábel
+Motor1B = 24 #18-as GPIO láb IC: input 2 zöld kábel
+Motor1E = 25 #22-es GPIO láb IC: enable 1,2 lila kábel
 
-Motor2A = 5 #29-es láb input 4 sárga kábel
-Motor2B = 6 #31-es láb input 3 zöld kábel
-Motor2E = 13 #33-as láb enable 3,4 lila kábel
+Motor2A = 5 #29-es GPIO láb IC: input 4 sárga kábel
+Motor2B = 6 #31-es GPIO láb IC: input 3 zöld kábel
+Motor2E = 13 #33-as GPIO láb IC: enable 3,4 lila kábel
 
 GPIO.setup(Motor1A,GPIO.OUT)
 GPIO.setup(Motor1B,GPIO.OUT)
